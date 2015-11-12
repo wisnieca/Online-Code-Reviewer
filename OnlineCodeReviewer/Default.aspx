@@ -21,13 +21,23 @@
                 <div class="title">
                     Code Review for Michael Jordan
                 </div>
-                <div class="codeSection">
-                    <div class="userInfo">
-                        <div class="username">MJ23</div>
-                        <div class="date">11/2/2015</div>
+                <div class="contentSection">
+                    <div class="initialCode">
+                        <div class="userInfo">
+                            <div class="username">MJ23</div>
+                            <div class="date">Asked on: 11/2/2015</div>
+                        </div>
+                        <div class="codeSection">
+                            <div class="description">
+                                Here I am setting the selected value of a drop down using Jquery. 
+                            </div>
+                            <div class="code">
+                                $("#dropDown option[value='2']").prop('selected', true);
+                                // this sets the drop down selected value to 2
+                            </div>
+                        </div>
+                        <div class="clearer"></div>
                     </div>
-                </div>
-                <div class="rightRail">
                 </div>
             </div>
         </div>

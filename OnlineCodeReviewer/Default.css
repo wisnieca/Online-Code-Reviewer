@@ -11,7 +11,7 @@ div.maincontainer {
     max-width: 980px;
     width: 980px;
     margin: auto;
-    background: #e9e9e9;
+    background: #fafafa;
     color: #403E3F;
     position: relative;
     overflow: hidden;
@@ -19,8 +19,6 @@ div.maincontainer {
     -moz-box-shadow: 0 0 5px 2px rgba(0,0,0,0.75);
     box-shadow: 0 0 5px 2px rgba(0,0,0,0.75);
 }
-
-div.maincontent {padding-bottom: 40px;}
 
 div.mainNavContainer {
     position: absolute;
@@ -37,3 +35,35 @@ ul.mainNav {
     ul.mainNav li {
         display: inline-block;
     }
+
+div.maincontent {
+    padding-bottom: 40px;
+    margin-top: 45px;
+}
+
+div.title {
+    font-size: 24px;
+    padding: 10px;
+    border-bottom: solid 1px #999;
+}
+
+div.contentSection {
+    margin: 10px;
+}
+
+div.codeSection {
+    float: left;
+    margin: 10px;
+    width: calc(100% - 120x);
+}
+
+div.userInfo {
+    float: left;
+    width: 120px;
+}
+
+div.clearer {
+    float: none;
+    clear: both;
+    width: 100%;
+}

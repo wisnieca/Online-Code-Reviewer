@@ -28,17 +28,59 @@ div.mainNavContainer {
     background: #403e3f;
 }
 
+div.pageTitle {
+    font-family: 'Alex Brush', cursive;
+    font-size: 30px;
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    padding-left: 20px;
+    line-height: 45px;
+    pointer-events: none;
+}
+
 ul.mainNav {
     list-style-type: none;
+    float: right;
+    padding-right: 20px;
 }
 
     ul.mainNav li {
         display: inline-block;
+        text-align: center;
+        width: 50px;
     }
+
+        ul.mainNav li a {
+            text-decoration: none;
+            color: #e9e9e9;
+            cursor: pointer;
+        }
+
+            ul.mainNav li a:hover {
+                text-decoration: underline;
+            }
+
+        ul.mainNav li.search {
+            width: 150px;
+        }
+
+            ul.mainNav li.search div.searchContainer {
+                border: solid 1px #999;
+                background: #fff;
+                color: #403e3f;
+            }
+
+            ul.mainNav li.search input {
+                width: 130px;
+                border: 0;
+                background: none;
+            }
 
 div.maincontent {
     padding-bottom: 40px;
     margin-top: 45px;
+    font-size: 14px;
 }
 
 div.title {
@@ -53,13 +95,57 @@ div.contentSection {
 
 div.codeSection {
     float: left;
-    margin: 10px;
-    width: calc(100% - 120x);
+    padding: 0 10px 10px 10px;
+    width: calc(100% - 151px);
+    border-left: solid 1px #999;
 }
+
+    div.codeSection div.code {
+        padding: 5px;
+        background: #e9e9e9;
+        font-family: Consolas;
+    }
+
+        div.codeSection div.code span.string {
+            color: #d69d85;
+        }
+
+        div.codeSection div.code span.keyword {
+            color: #569cd6;
+        }
+
+    div.codeSection div.comment {
+        margin: 5px 0;
+    }
 
 div.userInfo {
     float: left;
-    width: 120px;
+    width: 130px;
+    font-size: 12px;
+}
+
+div.tags {
+    margin-top: 10px;
+}
+
+div.tag {
+    display: inline-block;
+    padding: 2px 4px;
+    margin: 0 2px;
+    background: #ffff99;
+    font-size: 12px;
+}
+
+div.replyTitle {
+    font-size: 20px;
+    margin: 20px 0;
+    text-indent: 10px;
+    border-bottom: solid 1px #e9e9e9;
+}
+
+div.reply {
+    padding: 10px 0;
+    border-bottom: solid 1px #e9e9e9;
 }
 
 div.clearer {

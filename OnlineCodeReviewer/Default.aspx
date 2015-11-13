@@ -21,6 +21,40 @@
                 <div class="title">
                     Code Review for Michael Jordan
                 </div>
+                <div class="addReplyHolder none">
+                    <div class="addReplyContent">
+                        <div class="origCode">
+                            <div class="origCodeTitle">Original Code</div>
+                            <div class="codeSection">
+                                <div class="comment">
+                                    Here I am setting the selected value of a navigation bar using jquery.
+                                </div>
+                                <div class="code">
+                                    $(<span class="string">".navBar li"</span>).on(<span class="string">'click'</span>, <span class="keyword">function</span>() {<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> (<span class="keyword">var</span> i=0; i < $(<span class="string">".navBar"</span>).find(<span class="string">"li"</span>).length; i++) {<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$($(<span class="string">".navBar"</span>).find(<span class="string">"li"</span>)[i]).removeClass(<span class="string">"active"</span>);<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;$(<span class="keyword">this</span>).addClass(<span class="string">"active"</span>);<br />
+                                    });
+                                </div>
+                                <div class="comment">
+                                    I loop through and remove the active class of each li and then set the clicked one to be active.
+                                </div>
+                            </div>
+                            <div class="clearer"></div>
+                        </div>
+                        <div class="newReply">
+                            <div class="newReplyTitle">Enter Reply Here:</div>
+                            <div class="replyComment">
+                                <asp:TextBox ID="Comment" runat="server" Placeholder="Comments"></asp:TextBox>
+                            </div>
+                            <div class="replyCode">
+                                <asp:TextBox ID="Code" runat="server" TextMode="MultiLine" Placeholder="Code"></asp:TextBox>
+                            </div>
+                            <div class="submit">Submit</div>
+                        </div>
+                    </div>
+                </div>
                 <div class="contentSection">
                     <div class="initialCode">
                         <div class="userInfo">
@@ -62,7 +96,7 @@
                     <div class="replies">
                         <div class="reply">
                             <div class="userInfo">
-                                <div class="username">CWisniewski</div>
+                                <div class="username">mikeWits</div>
                                 <div class="date">Replied on: 11/3/2015</div>
                             </div>
                             <div class="codeSection">
@@ -82,7 +116,7 @@
                         </div>
                         <div class="reply">
                             <div class="userInfo">
-                                <div class="username">badams</div>
+                                <div class="username">joeJohnson</div>
                                 <div class="date">Replied on: 11/3/2015</div>
                             </div>
                             <div class="codeSection">
@@ -97,6 +131,9 @@
                                 </div>
                             </div>
                             <div class="clearer"></div>
+                        </div>
+                        <div class="addReply">
+                            <i class="fa fa-plus"></i>Reply
                         </div>
                     </div>
                 </div>

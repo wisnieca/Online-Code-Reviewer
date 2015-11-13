@@ -10,7 +10,16 @@
 namespace OnlineCodeReviewer {
     
     
-    public partial class Default {
+    public partial class Explore {
+        
+        /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// MainNav control.
@@ -20,23 +29,5 @@ namespace OnlineCodeReviewer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::OnlineCodeReviewer.NavMenuControl MainNav;
-        
-        /// <summary>
-        /// Comment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Comment;
-        
-        /// <summary>
-        /// Code control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Code;
     }
 }

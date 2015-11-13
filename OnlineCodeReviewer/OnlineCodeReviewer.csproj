@@ -70,6 +70,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Default.css" />
     <Content Include="ClientScripts\Default.js" />
+    <Content Include="Explore.aspx" />
     <Content Include="NavMenuControl.ascx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -89,6 +90,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Explore.aspx.cs">
+      <DependentUpon>Explore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Explore.aspx.designer.cs">
+      <DependentUpon>Explore.aspx</DependentUpon>
     </Compile>
     <Compile Include="NavMenuControl.ascx.cs">
       <DependentUpon>NavMenuControl.ascx</DependentUpon>

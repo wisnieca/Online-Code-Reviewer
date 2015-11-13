@@ -104,7 +104,7 @@ div.contentSection {
 div.codeSection {
     float: left;
     padding: 0 10px 10px 10px;
-    width: calc(100% - 151px);
+    width: calc(100% - 155px);
     border-left: solid 1px #999;
 }
 
@@ -134,6 +134,8 @@ div.tag {
     margin: 0 2px;
     background: #ffff99;
     font-size: 12px;
+    font-weight: bold;
+    color: #403e3f;
 }
 
 div.replyTitle {

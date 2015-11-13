@@ -12,6 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </head>
 <body>
     <form runat="server">
@@ -30,12 +31,13 @@
                                     Here I am setting the selected value of a navigation bar using jquery.
                                 </div>
                                 <div class="code">
-                                    $(<span class="string">".navBar li"</span>).on(<span class="string">'click'</span>, <span class="keyword">function</span>() {<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> (<span class="keyword">var</span> i=0; i < $(<span class="string">".navBar"</span>).find(<span class="string">"li"</span>).length; i++) {<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$($(<span class="string">".navBar"</span>).find(<span class="string">"li"</span>)[i]).removeClass(<span class="string">"active"</span>);<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;$(<span class="keyword">this</span>).addClass(<span class="string">"active"</span>);<br />
-                                    });
+                                    <code class="prettyprint">$(".navBar li").on('click', function() {<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;for (var i=0; i < $(".navBar").find("li").length; i++) {<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$($(".navBar").find("li")[i]).removeClass("active");<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;$(this).addClass("active");<br />
+                                        });
+                                    </code>
                                 </div>
                                 <div class="comment">
                                     I loop through and remove the active class of each li and then set the clicked one to be active.
@@ -46,12 +48,15 @@
                         <div class="newReply">
                             <div class="newReplyTitle">Enter Reply Here:</div>
                             <div class="replyComment">
-                                <asp:TextBox ID="Comment" runat="server" Placeholder="Comments"></asp:TextBox>
+                                <asp:TextBox ID="Comment" runat="server" CssClass="commentText" Placeholder="Comments"></asp:TextBox>
                             </div>
                             <div class="replyCode">
                                 <asp:TextBox ID="Code" runat="server" TextMode="MultiLine" Placeholder="Code"></asp:TextBox>
                             </div>
-                            <div class="submit">Submit</div>
+                            <div class="buttonBar">
+                                <div class="submit">Submit</div>
+                                <div class="cancel">Cancel</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -66,12 +71,13 @@
                                 Here I am setting the selected value of a navigation bar using jquery.
                             </div>
                             <div class="code">
-                                $(<span class="string">".navBar li"</span>).on(<span class="string">'click'</span>, <span class="keyword">function</span>() {<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> (<span class="keyword">var</span> i=0; i < $(<span class="string">".navBar"</span>).find(<span class="string">"li"</span>).length; i++) {<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$($(<span class="string">".navBar"</span>).find(<span class="string">"li"</span>)[i]).removeClass(<span class="string">"active"</span>);<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;}<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;$(<span class="keyword">this</span>).addClass(<span class="string">"active"</span>);<br />
-                                });
+                                <code class="prettyprint">$(".navBar li").on('click', function() {<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;for (var i=0; i < $(".navBar").find("li").length; i++) {<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$($(".navBar").find("li")[i]).removeClass("active");<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;$(this).addClass("active");<br />
+                                    });
+                                </code>
                             </div>
                             <div class="comment">
                                 I loop through and remove the active class of each li and then set the clicked one to be active.
@@ -104,12 +110,13 @@
                                     It is actually more efficient to use jquery's each loop. 
                                 </div>
                                 <div class="code">
-                                    $(<span class="string">".navBar"</span>).find(<span class="string">"li"</span>).on(<span class="string">'click'</span>, <span class="keyword">function</span>() {<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;$.each($(<span class="string">".navBar"</span>).find(<span class="string">"li"</span>), <span class="keyword">function</span> () {<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(<span class="keyword">this</span>).removeClass(<span class="string">"active"</span>);<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;});<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;$(<span class="keyword">this</span>).addClass(<span class="string">"active"</span>);<br />
-                                    });
+                                    <code class="prettyprint">$(".navBar").find("li").on('click', function() {<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;$.each($(".navBar").find("li"), function () {<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).removeClass("active");<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;});<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;$(this).addClass("active");<br />
+                                        });
+                                    </code>
                                 </div>
                             </div>
                             <div class="clearer"></div>
@@ -117,17 +124,19 @@
                         <div class="reply">
                             <div class="userInfo">
                                 <div class="username">joeJohnson</div>
-                                <div class="date">Replied on: 11/3/2015</div>
+                                <div class="date">Replied on: 11/4/2015</div>
                             </div>
                             <div class="codeSection">
                                 <div class="comment">
                                     If only one element will be active at one time why not just do this? 
                                 </div>
                                 <div class="code">
-                                    $(<span class="string">".navBar"</span>).find(<span class="string">"li"</span>).on(<span class="string">'click'</span>, <span class="keyword">function</span>() {<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;$(<span class="string">".navBar"</span>).find(<span class="string">"li.active"</span>).removeClass(<span class="string">"active"</span>);<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;$(<span class="keyword">this</span>).addClass(<span class="string">"active"</span>);<br />
-                                    });
+                                    <code class="prettyprint">
+                                        $(".navBar").find("li").on('click', function() {<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;$(".navBar").find("li.active").removeClass("active");<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;$(this).addClass("active");<br />
+                                        });
+                                    </code>
                                 </div>
                             </div>
                             <div class="clearer"></div>

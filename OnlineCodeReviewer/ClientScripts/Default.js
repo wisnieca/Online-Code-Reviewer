@@ -5,9 +5,10 @@ Default.Initialize = function() {
         $(".addReplyHolder").removeClass("none");
         $(window).scrollTop(0);
         $("body").css("overflow", "hidden");
+        $(".commentText").focus();
     });
 
-    $(".submit").on('click', function () {
+    $(".submit, .cancel").on('click', function () {
         $(".addReplyHolder").addClass("none");
         $("body").css("overflow", "");
     });

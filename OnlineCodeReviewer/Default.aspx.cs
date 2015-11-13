@@ -16,6 +16,9 @@ namespace OnlineCodeReviewer
 
             if (!Page.ClientScript.IsClientScriptBlockRegistered("Default"))
                 Page.ClientScript.RegisterClientScriptInclude("Default", this.ResolveUrl("~/ClientScripts/Default.js"));
+
+            if (!Page.ClientScript.IsClientScriptBlockRegistered("Pretty"))
+                Page.ClientScript.RegisterClientScriptInclude("Pretty", this.ResolveUrl("https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"));
         }
     }
 }

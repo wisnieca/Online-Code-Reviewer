@@ -87,9 +87,9 @@ div.maincontent {
     font-size: 14px;
 }
 
-div.maincontent.explore {
-    text-align: center;
-}
+    div.maincontent.explore {
+        text-align: center;
+    }
 
 div.title {
     font-size: 24px;
@@ -113,14 +113,6 @@ div.codeSection {
         background: #e9e9e9;
         font-family: Consolas;
     }
-
-        div.codeSection div.code span.string {
-            color: #d69d85;
-        }
-
-        div.codeSection div.code span.keyword {
-            color: #569cd6;
-        }
 
     div.codeSection div.comment {
         margin: 5px 0;
@@ -151,9 +143,36 @@ div.replyTitle {
     border-bottom: solid 1px #e9e9e9;
 }
 
+div.buttonBar {
+    text-align: center;
+}
+
 div.reply {
     padding: 10px 0;
     border-bottom: solid 1px #e9e9e9;
+}
+
+div.cancel {
+    background: #c8c7c0;
+    border: solid 1px #b2b1aa;
+    color: #605f5d;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px auto;
+    width: 150px;
+    line-height: 25px;
+    text-align: center;
+    height: 25px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+    div.cancel:hover {
+        background: #b2b1aa;
+    }
+
+div.submit {
+    display: inline-block;
 }
 
 div.addReply,

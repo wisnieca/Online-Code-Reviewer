@@ -18,7 +18,7 @@
         <div class="maincontainer">
             <main:MainNav ID="MainNav" runat="server" />
             <div class="maincontent">
-                <div id="Review1" runat="server" visible="false">
+                <div id="Review1" runat="server" visible="true">
                     <div class="title">
                         Code Review for Michael Jordan
                     </div>
@@ -146,7 +146,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="Review2" runat="server" visible="true">
+                <div id="Review2" runat="server" visible="false">
                     <div class="title">
                         Code Review for Philip Petrosino
                     </div>
@@ -244,7 +244,7 @@
                                         </code>
                                 </div>
                                 <div class="comment">
-                                    I loop through and remove the active class of each li and then set the clicked one to be active.
+                                    This function updates the cards for the card game Purple.
                                 </div>
                                 <div class="tags">
                                     <div class="tag">
@@ -258,44 +258,41 @@
                             <div class="clearer"></div>
                         </div>
                         <div class="replyTitle">
-                            2 Replies
+                            1 Reply
                         </div>
                         <div class="replies">
                             <div class="reply">
                                 <div class="userInfo">
-                                    <div class="username">mikeWits</div>
-                                    <div class="date">Replied on: 11/3/2015</div>
+                                    <div class="username">cwisniewski</div>
+                                    <div class="date">Replied on: 11/24/2015</div>
                                 </div>
                                 <div class="codeSection">
                                     <div class="comment">
-                                        It is actually more efficient to use jquery's each loop. 
+                                        You should get rid of the check "layerSize == 2" from checking twice.
                                     </div>
                                     <div class="code">
-                                        <code class="prettyprint">$(".navBar").find("li").on('click', function() {<br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;$.each($(".navBar").find("li"), function () {<br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).removeClass("active");<br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;});<br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;$(this).addClass("active");<br />
-                                            });
-                                        </code>
-                                    </div>
-                                </div>
-                                <div class="clearer"></div>
-                            </div>
-                            <div class="reply">
-                                <div class="userInfo">
-                                    <div class="username">joeJohnson</div>
-                                    <div class="date">Replied on: 11/4/2015</div>
-                                </div>
-                                <div class="codeSection">
-                                    <div class="comment">
-                                        If only one element will be active at one time why not just do this? 
-                                    </div>
-                                    <div class="code">
-                                        <code class="prettyprint">$(".navBar").find("li").on('click', function() {<br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;$(".navBar").find("li.active").removeClass("active");<br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;$(this).addClass("active");<br />
-                                            });
+                                        <code class="prettyprint">public void UpdateCards(String currentCard, String previousCard, int cardCount)<br />
+                                            {<br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;CurrentCard = currentCard;<br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;PreviousCard = previousCard;<br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;CardCount = cardCount;<br />
+                                            <br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;int layersSize = cardCount >= 2 ? 2 : 1;<br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;Drawable[] layers = new Drawable[layersSize];<br />
+                                            <br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;layers[0] = getDrawableCard(CurrentCard);<br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;LayerDrawable layerDrawable;<br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;if (layersSize == 2) {<br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layers[1] = getDrawableCard(CurrentCard);<br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layers[0] = getDrawableCard(PreviousCard);<br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layerDrawable = new LayerDrawable(layers);<br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layerDrawable.setLayerInset(1, 250, 250, 0, 0);<br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layerDrawable.setLayerInset(0, 0, 0, 250, 250);<br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                            <br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;((ImageView) view.findViewById(R.id.imgCards)).setImageDrawable(layerDrawable);<br />
+                                            &nbsp;&nbsp;&nbsp;&nbsp;((TextView) view.findViewById(R.id.lblCount)).setText(String.valueOf(CardCount));<br />
+                                            }
                                         </code>
                                     </div>
                                 </div>

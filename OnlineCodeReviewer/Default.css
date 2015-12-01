@@ -213,6 +213,8 @@ div.addReplyContent {
     margin: 100px auto;
     background: #fff;
     padding-bottom: 20px;
+    max-height: calc(100% - 200px);
+    overflow: scroll;
 }
 
 div.origCodeTitle,
